@@ -57,7 +57,7 @@ app.MapGet("/tasks", async (ToDoDbContext db) =>
 })
 .WithName("GetAllTasks") // הוספת שם למסלול
 .Produces<List<Item>>(StatusCodes.Status200OK); // הוספת תוצאה אפשרית
-
+app.MapGet("/",()=>"AuthServer API is running");
 // Route להוספת משימה
 app.MapPost("/tasks", async (ToDoDbContext db, Item item) =>
 {
