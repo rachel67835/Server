@@ -110,4 +110,4 @@ app.MapDelete("/tasks/{id}", async (ToDoDbContext db, int id) =>
 .Produces(StatusCodes.Status204NoContent)
 .Produces(StatusCodes.Status404NotFound);
 
-app.Run();
+app.Run("http://0.0.0.0:5174"); // שינויים כאן
